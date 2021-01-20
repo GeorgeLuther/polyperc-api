@@ -1,6 +1,6 @@
 
 const express = require('express')
-const ArticlesService = require('./_-service')
+const ArticlesService = require('./users-service')
 
 const articlesRouter = express.Router()
 
