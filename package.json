@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-api",
+  "name": "polyperc-api",
   "version": "1.0.0",
-  "description": "Backend for project.",
+  "description": "Backend for rhythm creation sandbox. Created by George Luther in 2021.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require test/setup.js",
