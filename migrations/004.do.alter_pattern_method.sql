@@ -10,6 +10,6 @@ CREATE TYPE pattern_method AS ENUM (
   'last'
 );
 
-ALTER TABLE polyperc_projects
+ALTER TABLE polyperc_patterns
   ADD COLUMN
-    pattern_method pattern_method;
+    pattern_method pattern_method DEFAULT 'random';
