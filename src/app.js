@@ -15,6 +15,9 @@ app.use(cors())
 app.use(helmet())
 
 app.use('/api/patterns', PatternsRouter)
+app.get('/',(req,res)=>{
+  res.send('Hello, world!')
+})
 
 app.use(function errorHandler(error, req, res, next) {
   let response

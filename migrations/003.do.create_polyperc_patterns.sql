@@ -18,7 +18,7 @@ CREATE TABLE polyperc_patterns (
     is_soloed BOOLEAN DEFAULT FALSE,
     is_playing BOOLEAN DEFAULT FALSE,
     current_beat INTEGER DEFAULT 0,
-    volume INTEGER NOT NULL DEFAULT -20,
+    volume INTEGER DEFAULT -20,
 
     pattern_length INTEGER,
     active_beats INTEGER,
