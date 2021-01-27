@@ -1,5 +1,8 @@
 const PatternsService = {
-    
+    getAllPatternIds(db){
+        return db('polyperc_patterns')
+                .select('id')       
+    },
     getAllPatterns(db){
         return db('polyperc_patterns')
                 .select('*')

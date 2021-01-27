@@ -28,6 +28,11 @@ describe('Patterns Endpoints', function(){
                     .get('/api/patterns')
                     .expect(200, [])
             })
+            it('with query, responds with 200 and empty array',()=>{
+                return supertest(app)
+                    .get('/api/patterns?columns=id')
+                    .expect(200, [])
+            })
         })
 
         context('Given polyperc_patterns is seeded',()=>{
@@ -39,6 +44,12 @@ describe('Patterns Endpoints', function(){
                 return supertest(app)
                         .get('/api/patterns')
                         .expect(200, serializedTestPatterns())
+            })
+
+            it('with query, responds with 200 and an array of ids',()=>{
+                return supertest(app)
+                        .get('/api/patterns?columns=id')
+                        .expect(200, [1,2])
             })
         })
     })

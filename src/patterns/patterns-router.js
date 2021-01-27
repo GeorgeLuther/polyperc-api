@@ -28,10 +28,19 @@ const serializePattern = pattern => ({
 });
 PatternsRouter.route('/')
     .get((req, res, next)=>{
-        PatternsService.getAllPatterns(req.app.get('db'))
+        const { columns } = req.query
+        if (columns==='id') {
+            PatternsService.getAllPatternIds(req.app.get('db'))
+            .then(patternIds=>{
+                res.json(patternIds.map( obj => obj.id))
+            }).catch(next)
+        }
+        else {
+            PatternsService.getAllPatterns(req.app.get('db'))
             .then(patterns=>{
                 res.json(patterns.map(serializePattern))
             }).catch(next)
+        }
     })
     .post(jsonParser,(req,res,next)=>{
         const blankPattern = {
