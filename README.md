@@ -1,9 +1,49 @@
 # Polyperc API
 
+[Play with the live app](https://polyperc-app.vercel.app "click here to explore Polyperc")
+[View the front end git](https://github.com/GeorgeLuther/polyperc-app)
+
 This is the backend for a web app for generating rhythmic patterns!
+
 ## About
 
 Polyperc is a web app for generating and manipulating rhythmic ideas. This API us to keep all rhythmic patterns and their attributes in a postgreSQL database. This is useful because it allows for permanent storage, collaboration, and data manipulation. In future versions there will be users who create projects in which patterns are stored and organized. Then we may even have collaborative projects, tagging and rating systems, and more advanced means of retrieving, filtering, and generating rhythms and projects. The end goal is data which can be used to create new music via machine learning.
+
+## Using the API
+
+### Current functionalities:
+
+- #### Get all patterns
+
+   > GET Hello, world! 
+   Sending a git request to the base url should result in a 'Hello, world!' response.
+
+   > GET all pattern ids:
+   /api/patterns?columns=id
+   This will result in an array of all pattern ids.
+
+   > GET all patterns
+   /api/patterns
+   This will result in an array of all patterns as serialized objects.
+
+   > POST new template pattern
+   /api/patterns
+   This will result in a new, untitled pattern being added to the patterns table. The serialize pattern object will be sent in the body.
+
+   > PUT replacement pattern
+   /api/patterns/:id
+   This will replace a pattern with the result of the serialized pattern object you send in the body, assuming the format is correct.
+
+   > DELETE pattern by id
+   /api/patterns/:id
+   This will delete the pattern with that id from the database table.
+
+### Future requests:
+
+The next version will add search and sort functions to the patterns.
+
+A future version will require authentication and requests for patters will be specific to a user and project. There will be ways to view all patterns of a user, all patterns of a project, all projects of a user, all users...
+Eventually collaborative projects and pattern sharing will be possible.
 
 ## Set up
 

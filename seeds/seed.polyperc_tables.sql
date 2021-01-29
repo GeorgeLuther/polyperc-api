@@ -51,7 +51,7 @@ INSERT INTO polyperc_patterns (
     '{0,1,1,0,1,0,1,0}'
   ),
   (
-    'Amen-break beat',
+    'Amen-break hats',
     1,
     136,
     'D-1',
