@@ -1,6 +1,9 @@
 # Polyperc API
 
 This is the backend for a web app for generating rhythmic patterns!
+## About
+
+Polyperc is a web app for generating and manipulating rhythmic ideas. This API us to keep all rhythmic patterns and their attributes in a postgreSQL database. This is useful because it allows for permanent storage, collaboration, and data manipulation. In future versions there will be users who create projects in which patterns are stored and organized. Then we may even have collaborative projects, tagging and rating systems, and more advanced means of retrieving, filtering, and generating rhythms and projects. The end goal is data which can be used to create new music via machine learning.
 
 ## Set up
 
@@ -10,8 +13,6 @@ Complete the following steps to start a new project (NEW-PROJECT-NAME):
 2. `cd` into the cloned repository
 3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
 4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
 
 ## IMPORTANT NOTE ON NODE VERSION
 
@@ -50,7 +51,3 @@ Run the tests in watch mode `npm test`
 Migrate the dev database `npm run migrate`
 
 Migrate the test database `npm run migrate:test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.

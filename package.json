@@ -10,7 +10,7 @@
     "migrate:test": "env NODE_ENV=test npm run migrate",
     "migrate:production": "heroku run npm run migrate",
     "start": "node src/server.js",
-    "deploy": "git push heroku migration-setup:main",
+    "deploy": "git push heroku patterns-endpoint:main",
     "postdeploy": "npm run migrate:production"
   },
   "keywords": [],
