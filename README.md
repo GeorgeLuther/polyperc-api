@@ -13,28 +13,26 @@ Polyperc is a web app for generating and manipulating rhythmic ideas. This API u
 
 ### Current functionalities:
 
-- #### Get all patterns
-
-   > GET Hello, world! 
+- #### GET Hello, world! 
    Sending a git request to the base url should result in a 'Hello, world!' response.
 
-   > GET all pattern ids:
+- #### GET all pattern ids:
    /api/patterns?columns=id
    This will result in an array of all pattern ids.
 
-   > GET all patterns
+- #### GET all patterns
    /api/patterns
    This will result in an array of all patterns as serialized objects.
 
-   > POST new template pattern
+- #### POST new template pattern
    /api/patterns
    This will result in a new, untitled pattern being added to the patterns table. The serialize pattern object will be sent in the body.
 
-   > PUT replacement pattern
+- #### PUT replacement pattern
    /api/patterns/:id
    This will replace a pattern with the result of the serialized pattern object you send in the body, assuming the format is correct.
 
-   > DELETE pattern by id
+- #### DELETE pattern by id
    /api/patterns/:id
    This will delete the pattern with that id from the database table.
 
