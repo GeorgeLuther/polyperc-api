@@ -45,7 +45,7 @@ PatternsRouter.route('/')
     .post(jsonParser,(req,res,next)=>{
         const blankPattern = {
             pattern_name: 'Untitled',
-            sound: 'kick.wav',
+            sound: 'E-1',
             volume: -20,
         
             active_beats: 0,
